@@ -25,7 +25,7 @@ mvn clean test
 ```
 
 ### Project architecture ###
-![Project architecture](project-diagram/![Test Image 1](3DTest.png))
+![Project architecture](project-diagram/architecture-diagram.PNG)
 
 ### Who do I talk to ###
 * For more information contact: Atinder Aujla at [atinder.aujla@outlook.com](mailto:atinder.aujla@outlook.com)
