@@ -7,7 +7,7 @@ public class ApiKeyTests extends TestsBase {
 
     @BeforeMethod
     public void login() {
-        getLoginPage().open(baseUrl);
+        getLoginPage().open();
         getLoginPage().login("test@test.com", "Test@123");
     }
 

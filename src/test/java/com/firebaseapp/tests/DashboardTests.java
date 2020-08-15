@@ -7,38 +7,38 @@ public class DashboardTests extends TestsBase {
 
     @BeforeMethod
     public void login() {
-        getLoginPage().open(baseUrl);
+        getLoginPage().open();
         getLoginPage().login("test@test.com", "Test@123");
     }
 
     @Test
     public void projectLinkTest() {
         getDashboardPage().clickProjectLinktext();
-        getProjectPage().verifyPageUrl(baseUrl);
+        getProjectPage().verifyPageUrl();
     }
 
     @Test
     public void userManagementLinkTest() {
         getDashboardPage().clickUserManagementLinktext();
-        getUserManagementProjectListPage().verifyPageUrl(baseUrl);
+        getUserManagementProjectListPage().verifyPageUrl();
     }
 
     @Test
     public void allUsersLinkTest() {
         getDashboardPage().clickAllUsersLinktext();
-        getUserManagementPage().verifyPageUrl(baseUrl);
+        getUserManagementPage().verifyPageUrl();
     }
 
     @Test
     public void analyticsLinkTest() {
         getDashboardPage().clickAnalyticsLinktext();
-        getProjectListPage().verifyPageUrl(baseUrl);
+        getProjectListPage().verifyPageUrl();
     }
 
     @Test
     public void automationLinkTest() {
         getDashboardPage().clickAutomationLinktext();
-        getAutomationDashboardPage().verifyPageUrl(baseUrl);
+        getAutomationDashboardPage().verifyPageUrl();
     }
 
 }

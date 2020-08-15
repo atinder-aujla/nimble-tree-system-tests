@@ -6,7 +6,7 @@ public class LoginTests extends TestsBase {
 
     @Test
     public void loginTest() {
-        getLoginPage().open(baseUrl);
+        getLoginPage().open();
         getLoginPage().login("test@test.com", "Test@123");
         getDashboardPage().isDashboardTextDisplayed();
     }

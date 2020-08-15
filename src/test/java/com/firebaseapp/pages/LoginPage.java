@@ -1,5 +1,6 @@
 package com.firebaseapp.pages;
 
+import com.firebaseapp.config.TestConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -15,8 +16,8 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    public void open(String baseUrl) {
-        driver.get(baseUrl + "/login");
+    public void open() {
+        driver.get(TestConfig.BASE_URL + "/login");
     }
 
     public void login(String email, String password) {

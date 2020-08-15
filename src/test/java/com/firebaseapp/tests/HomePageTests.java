@@ -6,7 +6,7 @@ public class HomePageTests extends TestsBase {
 
     @Test
     public void homePageElementsExistenceTest() {
-        getHomePage().open(baseUrl);
+        getHomePage().open();
         getHomePage().isMicroTaskServicesTextDisplayed();
         getHomePage().isMicroTaskServicesHeaderDisplayed();
         getHomePage().isProductTestingTextDisplayed();

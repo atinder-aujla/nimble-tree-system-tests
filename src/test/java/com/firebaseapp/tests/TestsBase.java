@@ -1,5 +1,6 @@
 package com.firebaseapp.tests;
 
+import com.firebaseapp.config.TestConfig;
 import com.firebaseapp.pages.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -11,8 +12,6 @@ import org.testng.annotations.BeforeTest;
 import java.util.concurrent.TimeUnit;
 
 public class TestsBase {
-
-    protected String baseUrl = "https://coherent-tree.firebaseapp.com/";
 
     protected WebDriver driver;
 
@@ -33,7 +32,7 @@ public class TestsBase {
     @BeforeMethod
     public void beforeEachTest() {
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(TestConfig.WAIT_TIME_IN_SECONDS, TimeUnit.SECONDS);
     }
 
     @AfterMethod

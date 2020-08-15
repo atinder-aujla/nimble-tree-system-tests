@@ -1,5 +1,6 @@
 package com.firebaseapp.pages;
 
+import com.firebaseapp.config.TestConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -19,8 +20,8 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public void open(String baseUrl) {
-        driver.get(baseUrl + "/home");
+    public void open() {
+        driver.get(TestConfig.BASE_URL + "/home");
     }
 
     public void isMicroTaskServicesTextDisplayed() {
