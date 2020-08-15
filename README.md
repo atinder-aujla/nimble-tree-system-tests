@@ -1,7 +1,7 @@
 # README #
 
 ### About the repository ###
-* This repository contains automated tests for 'coherent-tree' web application.
+* This repository contains automated tests for 'coherent-tree (nimble-tree)' web application.
 
 ### Prerequisite ###
 * Java installed
