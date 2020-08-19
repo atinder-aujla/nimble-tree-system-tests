@@ -4,6 +4,9 @@ import com.firebaseapp.config.TestConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * @author Atinder
+ */
 public class HomePage {
 
     private final WebDriver driver;

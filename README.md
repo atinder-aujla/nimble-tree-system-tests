@@ -3,6 +3,13 @@
 ### About the repository ###
 * This repository contains automated tests for 'coherent-tree (nimble-tree)' web application.
 
+### Scope of test scripts ###
+* Home page elements
+* Valid Login
+* Logout
+* User dashboard elements
+* User api key
+
 ### Prerequisite ###
 * Java installed
 * JAVA_HOME environment variable configured
@@ -15,11 +22,14 @@
 * Maven
 * TestNG
 * Selenium WebDriver
+* Web Driver Manager
 
 ### How do I get set up ###
 * Download the repository into system.
 * Unzip the repository
-* Run the project through command line:
+
+### How to execute tests ###
+* Open command-line. Go to project directory. Execute below command:
 ```
 mvn clean test
 ```

@@ -3,6 +3,9 @@ package com.firebaseapp.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * @author Atinder
+ */
 public class DashboardPage {
 
     private final WebDriver driver;

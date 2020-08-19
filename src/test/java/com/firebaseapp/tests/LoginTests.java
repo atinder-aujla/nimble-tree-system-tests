@@ -2,6 +2,9 @@ package com.firebaseapp.tests;
 
 import org.testng.annotations.Test;
 
+/**
+ * @author Atinder
+ */
 public class LoginTests extends TestsBase {
 
     @Test

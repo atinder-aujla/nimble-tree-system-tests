@@ -1,5 +1,8 @@
 package com.firebaseapp.config;
 
+/**
+ * @author Atinder
+ */
 public class TestConfig {
 
     public static final String BASE_URL = "https://coherent-tree.firebaseapp.com/";

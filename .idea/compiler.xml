@@ -9,5 +9,8 @@
         <module name="nimble-tree-system-tests" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="nimble-tree-system-tests" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

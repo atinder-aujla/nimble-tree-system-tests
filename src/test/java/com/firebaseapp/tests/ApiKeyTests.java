@@ -3,6 +3,9 @@ package com.firebaseapp.tests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+/**
+ * @author Atinder
+ */
 public class ApiKeyTests extends TestsBase {
 
     @BeforeMethod

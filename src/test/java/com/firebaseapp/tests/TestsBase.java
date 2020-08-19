@@ -11,6 +11,9 @@ import org.testng.annotations.BeforeTest;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author Atinder
+ */
 public class TestsBase {
 
     protected WebDriver driver;

@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * @author Atinder
+ */
 public class ProjectListPage {
 
     private String pageEndpoint = "analytics/project-list";
