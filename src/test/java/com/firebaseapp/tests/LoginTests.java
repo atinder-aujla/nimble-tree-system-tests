@@ -1,5 +1,6 @@
 package com.firebaseapp.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
@@ -19,6 +20,6 @@ public class LoginTests extends TestsBase {
         loginTest();
         getDashboardPage().clickCoherentDroplist();
         getDashboardPage().clickLogoutLinktext();
-        getLoginPage().isSigninButtonDisplayed();
+        Assert.assertTrue(getLoginPage().isSigninButtonDisplayed());
     }
 }

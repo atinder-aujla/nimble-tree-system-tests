@@ -8,19 +8,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * @author Atinder
  */
-public class UserManagementProjectListPage {
+public class UserManagementProjectListPage extends PagesBase {
 
     private String pageEndpoint = "user-management-project-list";
 
-    private WebDriver driver;
-
     public UserManagementProjectListPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public  void verifyPageUrl() {
-        WebDriverWait webDriverWait = new WebDriverWait(driver, TestConfig.WAIT_TIME_IN_SECONDS);
-        webDriverWait.until(ExpectedConditions.urlToBe(TestConfig.BASE_URL + pageEndpoint));
+        getWebDriverWait().until(ExpectedConditions.urlToBe(TestConfig.BASE_URL + pageEndpoint));
     }
 
 }

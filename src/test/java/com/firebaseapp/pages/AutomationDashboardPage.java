@@ -8,18 +8,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * @author Atinder
  */
-public class AutomationDashboardPage {
+public class AutomationDashboardPage extends PagesBase {
 
     private String pageEndpoint = "automation-dashboard";
 
-    private final WebDriver driver;
-
     public AutomationDashboardPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public  void verifyPageUrl() {
-        WebDriverWait webDriverWait = new WebDriverWait(driver, TestConfig.WAIT_TIME_IN_SECONDS);
-        webDriverWait.until(ExpectedConditions.urlToBe(TestConfig.BASE_URL + pageEndpoint));
+        getWebDriverWait().until(ExpectedConditions.urlToBe(TestConfig.BASE_URL + pageEndpoint));
     }
 }

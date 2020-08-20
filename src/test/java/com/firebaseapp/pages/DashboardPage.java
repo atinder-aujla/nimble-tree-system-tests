@@ -2,13 +2,12 @@ package com.firebaseapp.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 /**
  * @author Atinder
  */
-public class DashboardPage {
-
-    private final WebDriver driver;
+public class DashboardPage extends PagesBase {
 
     private final By dashboardText = By.xpath("//h2[text()='Dashboard']");
     private final By coherentDroplist = By.xpath("//a[@data-toggle='dropdown']");
@@ -21,33 +20,47 @@ public class DashboardPage {
     private final By analyticsLinktext = By.xpath("//h2[text()='Analytics']");
     private final By automationLinktext = By.xpath("//h2[text()='Automation']");
 
-
     public DashboardPage(WebDriver driver){
-        this.driver = driver;
+        super(driver);
     }
 
-    public void isDashboardTextDisplayed() {
-        driver.findElement(dashboardText).isDisplayed();
+    public boolean isDashboardTextDisplayed() {
+        return getWebDriverWait().until(ExpectedConditions.visibilityOfElementLocated(dashboardText)).isDisplayed();
     }
 
     public void clickCoherentDroplist() {
-        driver.findElement(coherentDroplist).click();
+        getWebDriverWait().until(ExpectedConditions.visibilityOfElementLocated(coherentDroplist)).click();
     }
 
-    public void clickLogoutLinktext() { driver.findElement(logoutLinktext).click();}
+    public void clickLogoutLinktext() {
+        getWebDriverWait().until(ExpectedConditions.visibilityOfElementLocated(logoutLinktext)).click();
+    }
 
-    public void clickShowKeyLinktext() {driver.findElement(showKeyLinktext).click(); }
+    public void clickShowKeyLinktext() {
+        getWebDriverWait().until(ExpectedConditions.visibilityOfElementLocated(showKeyLinktext)).click();
+    }
 
-    public void isApiKeyTextDisplayed() {driver.findElement(apiKeyText).isDisplayed();}
+    public boolean isApiKeyTextDisplayed() {
+        return getWebDriverWait().until(ExpectedConditions.visibilityOfElementLocated(apiKeyText)).isDisplayed();}
 
-    public void clickProjectLinktext() { driver.findElement(projectLinktext).click();}
+    public void clickProjectLinktext() {
+        getWebDriverWait().until(ExpectedConditions.visibilityOfElementLocated(projectLinktext)).click();
+    }
 
-    public void clickUserManagementLinktext() { driver.findElement(userManagementLinktext).click(); }
+    public void clickUserManagementLinktext() {
+        getWebDriverWait().until(ExpectedConditions.visibilityOfElementLocated(userManagementLinktext)).click();
+    }
 
-    public void clickAllUsersLinktext() { driver.findElement(allUsersLinktext).click();}
+    public void clickAllUsersLinktext() {
+        getWebDriverWait().until(ExpectedConditions.visibilityOfElementLocated(allUsersLinktext)).click();
+    }
 
-    public void clickAnalyticsLinktext() { driver.findElement(analyticsLinktext).click(); }
+    public void clickAnalyticsLinktext() {
+        getWebDriverWait().until(ExpectedConditions.visibilityOfElementLocated(analyticsLinktext)).click();
+    }
 
-    public void clickAutomationLinktext() { driver.findElement(automationLinktext).click(); }
+    public void clickAutomationLinktext() {
+        getWebDriverWait().until(ExpectedConditions.visibilityOfElementLocated(automationLinktext)).click();
+    }
 
 }

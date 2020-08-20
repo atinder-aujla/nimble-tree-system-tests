@@ -8,18 +8,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * @author Atinder
  */
-public class ProjectPage {
+public class ProjectPage extends PagesBase {
 
     private String pageEndpoint = "project";
 
-    private WebDriver driver;
-
     public ProjectPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public  void verifyPageUrl() {
-        WebDriverWait webDriverWait = new WebDriverWait(driver, TestConfig.WAIT_TIME_IN_SECONDS);
-        webDriverWait.until(ExpectedConditions.urlToBe(TestConfig.BASE_URL + pageEndpoint));
+        getWebDriverWait().until(ExpectedConditions.urlToBe(TestConfig.BASE_URL + pageEndpoint));
     }
 }

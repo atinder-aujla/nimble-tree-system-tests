@@ -8,19 +8,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * @author Atinder
  */
-public class ProjectListPage {
+public class ProjectListPage extends PagesBase {
 
     private String pageEndpoint = "analytics/project-list";
 
-    private WebDriver driver;
-
     public ProjectListPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public  void verifyPageUrl() {
-        WebDriverWait webDriverWait = new WebDriverWait(driver, TestConfig.WAIT_TIME_IN_SECONDS);
-        webDriverWait.until(ExpectedConditions.urlToBe(TestConfig.BASE_URL + pageEndpoint));
+        getWebDriverWait().until(ExpectedConditions.urlToBe(TestConfig.BASE_URL + pageEndpoint));
     }
 
 }

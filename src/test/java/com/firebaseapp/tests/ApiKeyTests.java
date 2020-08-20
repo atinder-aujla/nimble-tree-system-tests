@@ -1,5 +1,6 @@
 package com.firebaseapp.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -18,7 +19,7 @@ public class ApiKeyTests extends TestsBase {
     public void showKeyTest() throws InterruptedException {
         getDashboardPage().clickCoherentDroplist();
         getDashboardPage().clickShowKeyLinktext();
-        getDashboardPage().isApiKeyTextDisplayed();
+        Assert.assertTrue(getDashboardPage().isApiKeyTextDisplayed());
     }
 
 }
